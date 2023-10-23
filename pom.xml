@@ -23,7 +23,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.example.FactorialCalculator</mainClass> <!-- Specify the main class -->
+                            <mainClass>FactorialCalculator</mainClass> <!-- Specify only the class name -->
                         </manifest>
                     </archive>
                 </configuration>
