@@ -1,29 +1,15 @@
-package com.example;
-
-import java.util.Scanner;
-
 public class FactorialCalculator {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter a non-negative integer: ");
-        int n = scanner.nextInt();
-
-        if (n < 0) {
-            System.out.println("Error: Please enter a non-negative integer.");
-            return;
-        }
-
-        long factorial = calculateFactorial(n);
-
-        System.out.println("The factorial of " + n + " is: " + factorial);
-    }
-
-    public static long calculateFactorial(int n) {
-        if (n == 0 || n == 1) {
+    public static int factorial(int n) {
+        if (n == 0) {
             return 1;
         } else {
-            return n * calculateFactorial(n - 1);
+            return n * factorial(n - 1);
         }
+    }
+
+    public static void main(String[] args) {
+        int number = 5; // Change this to calculate factorial for a different number
+        int result = factorial(number);
+        System.out.println("Factorial of " + number + " is: " + result);
     }
 }
